@@ -11,7 +11,8 @@
 }
 
 #nav-list .nav-item {
-  font-weight: 700;
+  font-size: 0.8em;
+  font-weight: 600;
   margin-left: 2em;
   color: yellow;
   display: -webkit-box;
@@ -22,10 +23,14 @@
           align-items: center;
 }
 
-#nav-list .nav-item.primary-btn {
+#nav-list .nav-item .primary-btn {
   padding: 0.66em 2em;
   background: linear-gradient(160deg, yellow, orange);
   color: #333;
+}
+
+#nav-list .nav-item a {
+  cursor: pointer;
 }
 
 #navbar-container {
@@ -33,10 +38,10 @@
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  background: #333;
+  background: #444;
   position: fixed;
   top: 0;
-  max-height: 10vh;
+  max-height: 8vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -47,6 +52,6 @@
 
 #navbar-container #logo {
   margin-left: 7vw;
-  color: #555;
+  color: #888;
 }
 /*# sourceMappingURL=navbar.css.map */

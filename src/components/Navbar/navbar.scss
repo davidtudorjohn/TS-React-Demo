@@ -4,29 +4,33 @@
   flex-direction: row;
   margin-right: 7vw;
   .nav-item {
-    font-weight: 700;
+    font-size: 0.8em;
+    font-weight: 600;
     margin-left: 2em;
     color: yellow;
     display: flex;
     align-items: center;
-    &.primary-btn {
+    .primary-btn {
       padding: 0.66em 2em;
       background: linear-gradient(160deg, yellow, orange);
       color: #333;
+    }
+    a {
+      cursor: pointer;
     }
   }
 }
 #navbar-container {
   display: flex;
   width: 100vw;
-  background: #333;
+  background: #444;
   position: fixed;
   top: 0;
-  max-height: 10vh;
+  max-height: 8vh;
   align-items: center;
   justify-content: space-between;
   #logo {
     margin-left: 7vw;
-    color: #555;
+    color: #888;
   }
 }
