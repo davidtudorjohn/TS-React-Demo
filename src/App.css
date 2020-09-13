@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+@keyframes App-logo-bounce {
+  from {
+    transform: translateX(0em);
+  }
+  to {
+    transform: rotate(2em);
+  }
+}
