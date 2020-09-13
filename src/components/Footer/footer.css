@@ -12,13 +12,19 @@
   position: absolute;
   bottom: 0;
   background: linear-gradient(160deg, yellow, orange);
+  color: #444;
 }
 
 #footer-container h1 {
   margin-left: 7vw;
 }
 
+p {
+  color: #444;
+}
+
 .secondary-btn {
+  text-align: center;
   font-weight: 700;
   font-size: 0.8em;
   display: -webkit-box;
@@ -27,6 +33,12 @@
   padding: 0.66em 2em;
   color: #333;
   border: solid 2px #333;
+  border-bottom: solid 5px #333;
+}
+
+.secondary-btn:hover {
+  border-bottom: solid 2px #333;
+  margin-bottom: -3px;
 }
 
 #footer-btn {
