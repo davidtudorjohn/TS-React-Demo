@@ -23,7 +23,7 @@
 }
 
 #nav-list .nav-item.primary-btn {
-  padding: 1em 2em;
+  padding: 0.66em 2em;
   background: linear-gradient(160deg, yellow, orange);
   color: #333;
 }
