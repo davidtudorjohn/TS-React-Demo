@@ -1,0 +1,33 @@
+#nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin-right: 7vw;
+  .nav-item {
+    font-weight: 700;
+    margin-left: 2em;
+    color: yellow;
+    display: flex;
+    align-items: center;
+    &.primary-btn {
+      padding: 1em 2em;
+
+      background: linear-gradient(160deg, yellow, orange);
+      color: #333;
+    }
+  }
+}
+#navbar-container {
+  display: flex;
+  width: 100vw;
+  background: #333;
+  position: fixed;
+  top: 0;
+  max-height: 10vh;
+  align-items: center;
+  justify-content: space-between;
+  #logo {
+    margin-left: 7vw;
+    color: #555;
+  }
+}
