@@ -3,8 +3,21 @@
     margin-left: 7vw;
   }
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100vw;
   position: absolute;
   bottom: 0;
   background: linear-gradient(160deg, yellow, orange);
+}
+.secondary-btn {
+  font-weight: 700;
+  font-size: 0.8em;
+  display: flex;
+  padding: 0.66em 2em;
+  color: #333;
+  border: solid 2px #333;
+}
+#footer-btn {
+  margin-right: 7vw;
 }

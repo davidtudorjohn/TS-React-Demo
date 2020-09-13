@@ -24,7 +24,7 @@
   display: flex;
   width: 100vw;
   background: #444;
-  position: fixed;
+  position: relative;
   top: 0;
   max-height: 8vh;
   align-items: center;
@@ -32,5 +32,8 @@
   #logo {
     margin-left: 7vw;
     color: #888;
+    span {
+      color: orange;
+    }
   }
 }

@@ -39,7 +39,7 @@
   display: flex;
   width: 100vw;
   background: #444;
-  position: fixed;
+  position: relative;
   top: 0;
   max-height: 8vh;
   -webkit-box-align: center;
@@ -53,5 +53,9 @@
 #navbar-container #logo {
   margin-left: 7vw;
   color: #888;
+}
+
+#navbar-container #logo span {
+  color: orange;
 }
 /*# sourceMappingURL=navbar.css.map */

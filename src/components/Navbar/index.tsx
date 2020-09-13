@@ -3,7 +3,9 @@ import "./navbar.css";
 const Navbar = () => {
   return (
     <div id="navbar-container">
-      <h1 id="logo">amazin</h1>
+      <h1 id="logo">
+        amazin<span id="logoSpan">web</span>
+      </h1>
       <ul id="nav-list">
         <li className="nav-item">
           <a>Menu</a>
