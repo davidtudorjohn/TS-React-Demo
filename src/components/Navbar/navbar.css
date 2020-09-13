@@ -39,7 +39,7 @@
   display: flex;
   width: 100vw;
   background: #444;
-  position: relative;
+  position: fixed;
   top: 0;
   max-height: 8vh;
   -webkit-box-align: center;
@@ -57,5 +57,51 @@
 
 #navbar-container #logo span {
   color: orange;
+}
+
+#navbar-container #navbar-search-input {
+  color: #fefefe;
+  background: #666;
+  padding: 0.33em 0.66em;
+  min-width: 100%;
+  outline: none;
+  border: none;
+  font-family: raleway;
+  border-radius: 0.33em 0em 0em 0.33em;
+}
+
+#navbar-container #navbar-search-input::-webkit-input-placeholder {
+  color: #999;
+}
+
+#navbar-container #navbar-search-input:-ms-input-placeholder {
+  color: #999;
+}
+
+#navbar-container #navbar-search-input::-ms-input-placeholder {
+  color: #999;
+}
+
+#navbar-container #navbar-search-input::placeholder {
+  color: #999;
+}
+
+#navbar-container #navbar-search-form-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#navbar-container #navbar-search-form-btn {
+  cursor: pointer;
+  color: #999;
+  background: #666;
+  border: transparent;
+  border-radius: 0em 0.33em 0.33em 0em;
+  border-left: solid 2px #444;
 }
 /*# sourceMappingURL=navbar.css.map */

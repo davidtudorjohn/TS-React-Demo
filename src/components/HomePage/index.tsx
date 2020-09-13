@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Spinner from "../Spinner";
+import "./homepage.css";
 type LoadingState = {
   isLoading: boolean;
 };
