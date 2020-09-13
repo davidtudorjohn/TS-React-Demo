@@ -1,0 +1,10 @@
+#footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(160deg, yellow, orange);
+}
+/*# sourceMappingURL=footer.css.map */
