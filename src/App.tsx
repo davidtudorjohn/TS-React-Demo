@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "./components/Navbar/index";
 import Footer from "./components/Footer/index";
-import Spinner from "./components/Spinner/index";
+import HomePage from "./components/HomePage";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Spinner isLoading={true} />
+      <HomePage />
       <Footer />
     </div>
   );
