@@ -1,6 +1,6 @@
 import "./navbar.css";
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 // type State = {
 //   query: string;
 // };
@@ -32,9 +32,11 @@ class Navbar extends Component<Props> {
   render() {
     return (
       <div id="navbar-container">
-        <h1 id="logo">
-          amazin<span id="logoSpan">web</span>
-        </h1>
+        <Link to="/">
+          <h1 id="logo">
+            amazin<span id="logoSpan">web</span>
+          </h1>
+        </Link>
         <form
           id="navbar-search-form"
           name="search-form"
@@ -54,7 +56,7 @@ class Navbar extends Component<Props> {
             <button
               id="navbar-search-form-btn"
               type="submit"
-              form="search-form"
+              form="navbar-search-form"
             >
               <span className="fa fa-search">Search</span>
             </button>

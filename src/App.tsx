@@ -3,6 +3,7 @@ import Footer from "./components/Footer/index";
 import HomePage from "./components/HomePage";
 import Navbar from "./components/Navbar";
 import SearchResults from "./components/SearchResults";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // type State = {
 //   query: string;
 // };
@@ -21,6 +22,9 @@ function App() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
     setQuery(e.target.value);
+    if (e.target.value == "") {
+      setIsSearch(false);
+    }
 
     // setTimeout((e.target.value : string) => {
     //   setQuery(e.target.value);
@@ -32,16 +36,20 @@ function App() {
     console.log(query);
   };
   return (
-    <div className="App">
-      <Navbar
-        handleInputChange={handleInputChange}
-        handleSearchSubmit={handleSearchSubmit}
-      />
-      <HomePage />
-      {isSearch ? <SearchResults query={query} /> : ""}
+    <Router>
+      <div className="App">
+        <Navbar
+          handleInputChange={handleInputChange}
+          handleSearchSubmit={handleSearchSubmit}
+        />
+        <Switch>
+          <Route path="/" component={HomePage} />
+        </Switch>
+        {isSearch ? <SearchResults query={query} /> : null}
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
