@@ -17,6 +17,7 @@ import SearchResults from "./components/SearchResults";
 
 function App() {
   const [query, setQuery] = useState<string>("");
+  const [isSearch, setIsSearch] = useState<boolean>(false);
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
     setQuery(e.target.value);
@@ -27,6 +28,7 @@ function App() {
   };
   const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSearch(true);
     console.log(query);
   };
   return (
@@ -34,10 +36,10 @@ function App() {
       <Navbar
         handleInputChange={handleInputChange}
         handleSearchSubmit={handleSearchSubmit}
-        query={query}
       />
       <HomePage />
-      <SearchResults query={query} />
+      {isSearch ? <SearchResults query={query} /> : ""}
+
       <Footer />
     </div>
   );

@@ -3,6 +3,10 @@ interface Props {
   query: string;
 }
 const SearchResults = (props: Props) => {
-  return <div>Search results for: {props.query} </div>;
+  return (
+    <div>
+      Showing results for <strong>{props.query}</strong>
+    </div>
+  );
 };
 export default SearchResults;

@@ -5,7 +5,6 @@ import React, { Component } from "react";
 //   query: string;
 // };
 interface Props {
-  query: string;
   handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   handleSearchSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }
