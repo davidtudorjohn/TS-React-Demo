@@ -8,7 +8,6 @@
     font-size: 0.8em;
     font-weight: 600;
     margin-left: 2em;
-    color: $light-text;
     display: flex;
     align-items: center;
     .primary-btn {
@@ -18,6 +17,7 @@
     }
     a {
       cursor: pointer;
+      color: $light-text;
     }
   }
 }
