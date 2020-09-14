@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage";
 import Navbar from "./components/Navbar";
 import SearchResults from "./components/SearchResults";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Spinner from "./components/Spinner";
 // type State = {
 //   query: string;
 // };
@@ -19,10 +20,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   const [query, setQuery] = useState<string>("");
   const [isSearch, setIsSearch] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
     setQuery(e.target.value);
-    if (e.target.value == "") {
+    if (query.length == 0) {
       setIsSearch(false);
     }
 
@@ -32,7 +34,13 @@ function App() {
   };
   const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSearch(true);
+    if (query.length > 0) {
+      setIsSearch(true);
+      setIsLoading(true);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1000);
+    }
     console.log(query);
   };
   return (
@@ -46,7 +54,7 @@ function App() {
           <Route path="/" component={HomePage} />
         </Switch>
         {isSearch ? <SearchResults query={query} /> : null}
-
+        {isLoading ? <Spinner /> : null}
         <Footer />
       </div>
     </Router>
