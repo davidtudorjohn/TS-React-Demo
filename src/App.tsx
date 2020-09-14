@@ -46,13 +46,15 @@ function App() {
       setTimeout(() => {
         setIsLoading(false);
       }, 1000);
+    } else {
+      setIsSearch(false);
     }
     console.log(query);
   };
   var queryURI = query.split(" ").join("%20");
   return (
     <Router>
-      {isSearch ? <Redirect to={`/&query=${queryURI}`} /> : null}
+      {isSearch ? <Redirect to={`/&query=${query}`} /> : null}
 
       <div className="App">
         <Navbar
@@ -63,7 +65,7 @@ function App() {
           <Route exact path="/" component={HomePage} />
           <Route
             path={`/&query=${query}`}
-            render={() => <SearchPage query={query} />}
+            render={() => <SearchPage isSearch={isSearch} query={query} />}
           />
         </Switch>
         {isLoading ? <Spinner /> : null}
