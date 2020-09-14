@@ -51,6 +51,7 @@
 }
 
 #navbar-container #logo {
+  font-size: 1.66em;
   margin-left: 7vw;
   color: #888;
 }
@@ -59,34 +60,56 @@
   color: orange;
 }
 
-#navbar-container #navbar-search-input {
+#navbar-container #navbar-search-form {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #navbar-container #navbar-search-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  #navbar-container #navbar-search-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+#navbar-container #navbar-search-form #navbar-search-input {
+  margin: 0 auto;
   color: #fefefe;
   background: #666;
   padding: 0.33em 0.66em;
   min-width: 100%;
+  width: 100%;
   outline: none;
   border: none;
   font-family: raleway;
   border-radius: 0.33em 0em 0em 0.33em;
 }
 
-#navbar-container #navbar-search-input::-webkit-input-placeholder {
+#navbar-container #navbar-search-form #navbar-search-input::-webkit-input-placeholder {
   color: #999;
 }
 
-#navbar-container #navbar-search-input:-ms-input-placeholder {
+#navbar-container #navbar-search-form #navbar-search-input:-ms-input-placeholder {
   color: #999;
 }
 
-#navbar-container #navbar-search-input::-ms-input-placeholder {
+#navbar-container #navbar-search-form #navbar-search-input::-ms-input-placeholder {
   color: #999;
 }
 
-#navbar-container #navbar-search-input::placeholder {
+#navbar-container #navbar-search-form #navbar-search-input::placeholder {
   color: #999;
 }
 
-#navbar-container #navbar-search-form-label {
+#navbar-container #navbar-search-form #navbar-search-form-label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,7 +119,7 @@
           flex-direction: row;
 }
 
-#navbar-container #navbar-search-form-btn {
+#navbar-container #navbar-search-form #navbar-search-form-btn {
   cursor: pointer;
   color: #999;
   background: #666;
