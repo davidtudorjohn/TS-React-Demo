@@ -51,6 +51,8 @@
     }
 
     #navbar-search-input {
+      display: flex;
+      justify-content: space-between;
       margin: 0 auto;
       color: #fefefe;
       background: #666;

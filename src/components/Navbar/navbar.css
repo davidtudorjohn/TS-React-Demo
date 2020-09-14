@@ -81,6 +81,12 @@
 }
 
 #navbar-container #navbar-search-form #navbar-search-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0 auto;
   color: #fefefe;
   background: #666;

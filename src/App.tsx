@@ -2,9 +2,15 @@ import React, { useState } from "react";
 import Footer from "./components/Footer/index";
 import HomePage from "./components/HomePage";
 import Navbar from "./components/Navbar";
-import SearchResults from "./components/SearchResults";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import SearchResults from "./components/SearchResults";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import Spinner from "./components/Spinner";
+import SearchPage from "./components/SearchPage";
 // type State = {
 //   query: string;
 // };
@@ -43,17 +49,23 @@ function App() {
     }
     console.log(query);
   };
+  var queryURI = query.split(" ").join("%20");
   return (
     <Router>
+      {isSearch ? <Redirect to={`/&query=${queryURI}`} /> : null}
+
       <div className="App">
         <Navbar
           handleInputChange={handleInputChange}
           handleSearchSubmit={handleSearchSubmit}
         />
         <Switch>
-          <Route path="/" component={HomePage} />
+          <Route exact path="/" component={HomePage} />
+          <Route
+            path={`/&query=${query}`}
+            render={() => <SearchPage query={query} />}
+          />
         </Switch>
-        {isSearch ? <SearchResults query={query} /> : null}
         {isLoading ? <Spinner /> : null}
         <Footer />
       </div>

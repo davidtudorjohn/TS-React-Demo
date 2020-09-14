@@ -4,7 +4,7 @@ interface Props {
   query: string;
 }
 const SearchResults = (props: Props) => {
-  return props.query.length > 0 ? (
+  return props.query != undefined && props.query.length > 0 ? (
     <div id="search-results-container">
       Showing results for <strong>{props.query}</strong>
     </div>

@@ -58,7 +58,7 @@ class Navbar extends Component<Props> {
               type="submit"
               form="navbar-search-form"
             >
-              <span className="fa fa-search">Search</span>
+              Search
             </button>
           </label>
         </form>
