@@ -1,30 +1,35 @@
 import "./navbar.css";
 import React, { Component } from "react";
 
-type State = {
+// type State = {
+//   query: string;
+// };
+interface Props {
   query: string;
-};
-class Navbar extends Component<{}, State> {
-  tick() {
-    this.setState({
-      query: "",
-    });
-  }
-  componentWillMount() {
-    this.tick();
-  }
-  componentDidMount() {}
-  handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(this.state.query);
+  handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleSearchSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+}
+class Navbar extends Component<Props> {
+  // tick() {
+  //   this.setState({
+  //     query: "",
+  //   });
+  // }
+  // componentWillMount() {
+  //   this.tick();
+  // }
+  // componentDidMount() {}
+  // handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   console.log(this.state.query);
 
-    this.setState({
-      query: e.target.value,
-    });
-  };
-  handleSearchSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    console.log(this.state.query);
-  }
+  //   this.setState({
+  //     query: e.target.value,
+  //   });
+  // };
+  // handleSearchSubmit(e: React.FormEvent<HTMLFormElement>) {
+  //   e.preventDefault();
+  //   console.log(this.state.query);
+  // }
   render() {
     return (
       <div id="navbar-container">
@@ -35,13 +40,13 @@ class Navbar extends Component<{}, State> {
           id="navbar-search-form"
           name="search-form"
           onSubmit={(e: React.FormEvent<HTMLFormElement>) =>
-            this.handleSearchSubmit(e)
+            this.props.handleSearchSubmit(e)
           }
         >
           <label id="navbar-search-form-label">
             <input
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                this.handleInputChange(e)
+                this.props.handleInputChange(e)
               }
               id="navbar-search-input"
               type="text"
