@@ -15,10 +15,16 @@ class Navbar extends Component<{}, State> {
   }
   componentDidMount() {}
   handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(this.state.query);
+
     this.setState({
       query: e.target.value,
     });
   };
+  handleSearchSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    console.log(this.state.query);
+  }
   render() {
     return (
       <div id="navbar-container">
@@ -28,7 +34,9 @@ class Navbar extends Component<{}, State> {
         <form
           id="navbar-search-form"
           name="search-form"
-          onSubmit={() => alert("Form Submitted Successfully")}
+          onSubmit={(e: React.FormEvent<HTMLFormElement>) =>
+            this.handleSearchSubmit(e)
+          }
         >
           <label id="navbar-search-form-label">
             <input
