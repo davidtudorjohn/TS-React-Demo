@@ -9,26 +9,6 @@ interface Props {
   handleSearchSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 class Navbar extends Component<Props> {
-  // tick() {
-  //   this.setState({
-  //     query: "",
-  //   });
-  // }
-  // componentWillMount() {
-  //   this.tick();
-  // }
-  // componentDidMount() {}
-  // handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   console.log(this.state.query);
-
-  //   this.setState({
-  //     query: e.target.value,
-  //   });
-  // };
-  // handleSearchSubmit(e: React.FormEvent<HTMLFormElement>) {
-  //   e.preventDefault();
-  //   console.log(this.state.query);
-  // }
   render() {
     return (
       <div id="navbar-container">

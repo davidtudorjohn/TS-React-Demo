@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Footer from "./components/Footer/index";
 import HomePage from "./components/HomePage";
 import Navbar from "./components/Navbar";
-// import SearchResults from "./components/SearchResults";
 import {
   BrowserRouter as Router,
   Switch,
