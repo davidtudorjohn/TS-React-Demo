@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Spinner from "../Spinner";
 import "./homepage.css";
-type LoadingState = {
+interface State {
   isLoading: boolean;
-};
-class HomePage extends Component<{}, LoadingState> {
+}
+class HomePage extends Component<{}, State> {
   tick() {
     this.setState({
       isLoading: true,
