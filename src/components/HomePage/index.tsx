@@ -3,6 +3,7 @@ import Spinner from "../Spinner";
 import "./homepage.css";
 interface State {
   isLoading: boolean;
+  data: object;
 }
 class HomePage extends Component<{}, State> {
   tick() {
@@ -14,11 +15,13 @@ class HomePage extends Component<{}, State> {
     this.tick();
   }
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        isLoading: false,
-      });
-    }, 2000);
+    fetch("https://jsonplaceholder.typicode.com/todos")
+      .then((res) => res.json())
+      .then((json) =>
+        setTimeout(() => {
+          console.log(json);
+        }, 2000)
+      );
   }
   render() {
     return this.state.isLoading ? (
