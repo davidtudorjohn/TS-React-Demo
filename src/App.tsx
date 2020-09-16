@@ -11,17 +11,6 @@ import {
 } from "react-router-dom";
 import Spinner from "./components/Spinner";
 import SearchPage from "./components/SearchPage";
-// type State = {
-//   query: string;
-// };
-// tick() {
-//   this.setState({
-//     query: "",
-//   });
-// }
-// componentWillMount() {
-//   this.tick();
-// }
 
 function App() {
   const [query, setQuery] = useState<string>("");
@@ -33,10 +22,6 @@ function App() {
     if (query.length == 0) {
       setIsSearch(false);
     }
-
-    // setTimeout((e.target.value : string) => {
-    //   setQuery(e.target.value);
-    // }, 600);
   };
   const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
