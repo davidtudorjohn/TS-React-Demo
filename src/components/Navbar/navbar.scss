@@ -10,6 +10,20 @@
     margin-left: 2em;
     display: flex;
     align-items: center;
+    #mobile-menu-toggle-button {
+      @include tablet {
+        display: none;
+      }
+      @include desktop {
+        display: none;
+      }
+      background-color: transparent;
+      border: none;
+      * {
+        color: #fefefe;
+        font-size: 24px;
+      }
+    }
     .primary-btn {
       padding: 0.66em 2em;
       background: $primary-gradient;

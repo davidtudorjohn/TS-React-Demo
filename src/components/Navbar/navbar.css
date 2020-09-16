@@ -22,6 +22,28 @@
           align-items: center;
 }
 
+#nav-list .nav-item #mobile-menu-toggle-button {
+  background-color: transparent;
+  border: none;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #nav-list .nav-item #mobile-menu-toggle-button {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  #nav-list .nav-item #mobile-menu-toggle-button {
+    display: none;
+  }
+}
+
+#nav-list .nav-item #mobile-menu-toggle-button * {
+  color: #fefefe;
+  font-size: 24px;
+}
+
 #nav-list .nav-item .primary-btn {
   padding: 0.66em 2em;
   background: linear-gradient(160deg, yellow, orange);

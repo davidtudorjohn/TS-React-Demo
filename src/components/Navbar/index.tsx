@@ -1,6 +1,8 @@
 import "./navbar.css";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 // type State = {
 //   query: string;
 // };
@@ -44,15 +46,17 @@ class Navbar extends Component<Props> {
         </form>
         <ul id="nav-list">
           <li className="nav-item">
-            <a href="#">Menu</a>
-          </li>
-          <li className="nav-item">
             <a href="#">Sign up</a>
           </li>
           <li className="nav-item">
             <a className="primary-btn" href="#">
               Login
             </a>
+          </li>
+          <li className="nav-item">
+            <button id="mobile-menu-toggle-button">
+              <FontAwesomeIcon icon={faBars} />
+            </button>
           </li>
         </ul>
       </div>
