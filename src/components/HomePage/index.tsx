@@ -3,7 +3,6 @@ import Spinner from "../Spinner";
 import "./homepage.css";
 interface State {
   isLoading: boolean;
-  data: object;
 }
 class HomePage extends Component<{}, State> {
   tick() {
@@ -20,6 +19,9 @@ class HomePage extends Component<{}, State> {
       .then((json) =>
         setTimeout(() => {
           console.log(json);
+          this.setState({
+            isLoading: false,
+          });
         }, 2000)
       );
   }
