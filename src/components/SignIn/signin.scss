@@ -1,0 +1,14 @@
+#sign-in-container {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sign-in-form {
+  display: block;
+  flex-direction: row;
+  max-width: 380px;
+  padding: 2rem;
+  font-weight: 600;
+}

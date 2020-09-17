@@ -49,9 +49,9 @@ class Navbar extends Component<Props> {
             <a href="#">Sign up</a>
           </li>
           <li className="nav-item">
-            <a className="primary-btn" href="#">
-              Login
-            </a>
+            <Link className="primary-btn" to="/sign-in">
+              Sign In
+            </Link>
           </li>
           <li className="nav-item">
             <button id="mobile-menu-toggle-button">

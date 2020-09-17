@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Footer from "./components/Footer/index";
 import HomePage from "./components/HomePage";
+import SignIn from "./components/SignIn";
 import Navbar from "./components/Navbar";
 import {
   BrowserRouter as Router,
@@ -47,6 +48,7 @@ function App() {
         />
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/sign-in" component={SignIn} />
           <Route
             path={`/&query=${query}`}
             render={() => <SearchPage isSearch={isSearch} query={query} />}
