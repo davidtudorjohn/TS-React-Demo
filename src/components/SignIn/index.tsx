@@ -25,7 +25,7 @@ const SignIn = () => {
         </section>
         <section>
           <br />
-          <button type="submit" form="sign-in-form">
+          <button id="sign-in-btn" type="submit" form="sign-in-form">
             Sign In
           </button>
         </section>
