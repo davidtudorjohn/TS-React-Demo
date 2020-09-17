@@ -2,7 +2,7 @@ import "./navbar.css";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faSearch } from "@fortawesome/free-solid-svg-icons";
 // type State = {
 //   query: string;
 // };
@@ -40,7 +40,7 @@ class Navbar extends Component<Props> {
               type="submit"
               form="navbar-search-form"
             >
-              Search
+              <FontAwesomeIcon icon={faSearch} />
             </button>
           </label>
         </form>
